@@ -1,30 +1,27 @@
-{
-  "experts": [
-    {
-      "full_name": "Prof. Dr. Khudhair Yaseen Khudhair Kadhem Al-Ghannami",
-      "nationality": "Iraqi",
-      "location": "Karbala, Iraq",
-      "languages": ["Arabic"],
-      "tags": ["international-law", "counter-terrorism"],
-      "expertise": [
-        "Public International Law",
-        "International Dispute Settlement",
-        "Counter-Terrorism (International Law)"
-      ],
-      "bio_en": "Professor of Public International Law at the University of Karbala. His research focuses on counter-terrorism in international law and peaceful settlement of disputes."
-    },
-    {
-      "full_name": "Dr. Nagham Ishaq Zia",
-      "nationality": "Iraqi",
-      "location": "Duhok, Iraq",
-      "languages": ["Arabic", "English"],
-      "tags": ["human-rights", "ihl"],
-      "expertise": [
-        "International Humanitarian Law",
-        "Human Rights Law",
-        "Women’s Rights & Peace Studies"
-      ],
-      "bio_en": "Legal academic focusing on international humanitarian law and human rights, with particular interest in peace-building and women’s rights."
-    }
-  ]
-}
+[
+  {
+    "name": "Prof. Dr. Khudhair Yaseen Khudhair Kadhem Al-Ghannami",
+    "nationality": "Iraqi",
+    "location": "Karbala, Iraq",
+    "languages": ["Arabic"],
+    "expertise": "Public International Law, International Dispute Settlement, Counter-Terrorism",
+    "overview": "Professor of Public International Law at the University of Karbala.",
+    "publications": [
+      "International Legal Responses to Terrorism",
+      "Peaceful Settlement of Disputes in International Law"
+    ],
+    "cv": "khudhair_yaseen_alghannami_cv.pdf",
+    "tags": ["International Law", "Counter-Terrorism"]
+  },
+  {
+    "name": "Dr. Nagham Ishaq Zia",
+    "nationality": "Iraqi",
+    "location": "Duhok, Iraq",
+    "languages": ["Arabic", "English"],
+    "expertise": "International Humanitarian Law, Human Rights",
+    "overview": "Legal academic focusing on humanitarian law and women's rights.",
+    "publications": [],
+    "cv": "nagham_cv.pdf",
+    "tags": ["Human Rights", "IHL"]
+  }
+]
