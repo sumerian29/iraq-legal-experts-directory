@@ -2,70 +2,64 @@
   "experts": [
     {
       "id": "abdullah_ali_abbou",
-      "full_name": "عبد الله علي عبو",
-      "display_name": "أ.د. عبد الله علي عبو",
-      "title_en": "أستاذ دكتور",
-      "title_ar": "أستاذ دكتور",
-      "nationality": "عراقي",
-      "location": "بغداد، العراق",
-      "languages": ["العربية"],
-      "tags": ["الدراسات القانونية", "الفقه الإسلامي", "أكاديمي"],
-      "expertise": ["القانون المدني", "الفقه الإسلامي", "الدراسات القانونية"],
-      "bio_en": "أستاذ القانون المدني والفقه الإسلامي بجامعة بغداد. متخصص في الدراسات القانونية المقارنة بين القانون الوضعي والفقه الإسلامي.",
-      "bio_ar": "أستاذ القانون المدني والفقه الإسلامي بجامعة بغداد. متخصص في الدراسات القانونية المقارنة بين القانون الوضعي والفقه الإسلامي.",
+      "full_name": "Abdullah Ali Abbou",
+      "title_en": "Professor Dr.",
+      "nationality": "Iraqi",
+      "location": "Baghdad, Iraq",
+      "languages": ["Arabic"],
+      "tags": ["Legal Studies", "Islamic Jurisprudence", "Academic"],
+      "expertise": ["Civil Law", "Islamic Jurisprudence", "Legal Studies"],
+      "bio_en": "Professor of Civil Law and Islamic Jurisprudence at the University of Baghdad. Specializes in comparative legal studies between positive law and Islamic jurisprudence.",
       "contributions": [
-        "رئيس قسم القانون الخاص بجامعة بغداد (2015-2018)",
-        "عضو المجلس العلمي لكلية القانون",
-        "مشارك في لجنة مراجعة الدستور العراقي"
+        "Head of Private Law Department at University of Baghdad (2015-2018)",
+        "Member of the Faculty Council of Law College",
+        "Participant in the Iraqi Constitution Review Committee"
       ],
       "publications": [
         {
-          "title": "مبادئ الفقه الإسلامي في التشريع العراقي المعاصر",
+          "title": "Principles of Islamic Jurisprudence in Contemporary Iraqi Legislation",
           "year": 2017,
-          "venue": "مجلة كلية القانون - جامعة بغداد"
+          "venue": "Journal of Law College - University of Baghdad"
         },
         {
-          "title": "الالتزامات والعقود في القانون المدني العراقي",
+          "title": "Obligations and Contracts in Iraqi Civil Law",
           "year": 2014,
-          "venue": "دار الحرية للطباعة"
+          "venue": "Al-Hurriya Publishing House"
         }
       ],
       "documents": []
     },
     {
       "id": "khudhair_yaseen_al_ghannami",
-      "full_name": "خضير ياسين خضير كاظم الغانمي",
-      "display_name": "أ.د. خضير ياسين الغانمي",
-      "title_en": "أستاذ دكتور",
-      "title_ar": "أستاذ دكتور",
-      "nationality": "عراقي",
-      "location": "كربلاء، العراق",
-      "languages": ["العربية"],
-      "tags": ["القانون الدولي", "حقوق الإنسان", "مكافحة الإرهاب", "أكاديمي", "محامي"],
-      "expertise": ["القانون الدولي العام", "تسوية المنازعات الدولية", "مكافحة الإرهاب"],
-      "bio_en": "أستاذ مساعد في القانون الدولي العام بجامعة كربلاء منذ 2006. حاصل على الدكتوراه في القانون الدولي العام عام 2018. يركز بحثه على مكافحة الإرهاب في القانون الدولي وتسوية المنازعات.",
-      "bio_ar": "أستاذ مساعد في القانون الدولي العام بجامعة كربلاء منذ 2006. حاصل على الدكتوراه في القانون الدولي العام عام 2018. يركز بحثه على مكافحة الإرهاب في القانون الدولي وتسوية المنازعات.",
+      "full_name": "Khudhair Yaseen Khudhair Kadhem Al-Ghannami",
+      "title_en": "Professor Dr.",
+      "nationality": "Iraqi",
+      "location": "Karbala, Iraq",
+      "languages": ["Arabic"],
+      "tags": ["International Law", "Human Rights", "Counter-Terrorism", "Academic", "Lawyer"],
+      "expertise": ["Public International Law", "International Dispute Settlement", "Counter-Terrorism"],
+      "bio_en": "Assistant Professor of Public International Law at the University of Karbala since 2006. Holds a PhD in Public International Law (2018). Research focuses on counter-terrorism in international law and dispute settlement mechanisms.",
       "contributions": [
-        "عضو نقابة المحامين العراقيين منذ 1993",
-        "عضو جمعية حقوق الإنسان العراقية منذ 1998",
-        "مدير الدائرة القانونية في كلية الزراعة بجامعة كربلاء",
-        "عضو المجلس البلدي لمحافظة كربلاء (2003-2006)"
+        "Member of Iraqi Lawyers Association since 1993",
+        "Member of Iraqi Human Rights Society since 1998",
+        "Director of Legal Department at College of Agriculture, University of Karbala",
+        "Member of Karbala Provincial Council (2003-2006)"
       ],
       "publications": [
         {
-          "title": "مكافحة الإرهاب في القانون الدولي ومدى فاعليتها في العراق",
+          "title": "Combating Terrorism in International Law and its Effectiveness in Iraq",
           "year": 2018,
-          "venue": "أطروحة دكتوراه - الجامعة الإسلامية في لبنان"
+          "venue": "PhD Dissertation - Islamic University of Lebanon"
         },
         {
-          "title": "الوسائل السلمية لتسوية النزاعات في العلاقات الدولية",
+          "title": "Peaceful Means of International Dispute Settlement",
           "year": 2005,
-          "venue": "أطروحة ماجستير - الجامعة المستنصرية"
+          "venue": "Master's Thesis - Al-Mustansiriya University"
         }
       ],
       "documents": [
         {
-          "title": "السيرة الذاتية - أ.د. خضير الغانمي",
+          "title": "Curriculum Vitae - Prof. Dr. Khudhair Al-Ghannami",
           "type": "pdf",
           "file": "assets/docs/khudhair_cv.pdf"
         }
@@ -77,182 +71,116 @@
     },
     {
       "id": "bakhtyar_sdiq_rahim",
-      "full_name": "بختيار صدق رحيم",
-      "display_name": "أ.م.د. بختيار صدق رحيم",
-      "title_en": "أستاذ مساعد دكتور",
-      "title_ar": "أستاذ مساعد دكتور",
-      "nationality": "عراقي",
-      "location": "السليمانية، العراق",
-      "languages": ["العربية", "الإنجليزية", "الكردية"],
-      "tags": ["البحوث القانونية", "القانون الدستوري", "أكاديمي"],
-      "expertise": ["البحوث القانونية", "القانون الدستوري", "الحريات العامة"],
-      "bio_en": "أستاذ مساعد متخصص في البحوث القانونية والقانون الدستوري. له اهتمام خاص بتطوير المناهج القانونية في العراق ودراسة الأنظمة الدستورية المقارنة.",
-      "bio_ar": "أستاذ مساعد متخصص في البحوث القانونية والقانون الدستوري. له اهتمام خاص بتطوير المناهج القانونية في العراق ودراسة الأنظمة الدستورية المقارنة.",
+      "full_name": "Bakhtyar Sdiq Rahim",
+      "title_en": "Assistant Professor Dr.",
+      "nationality": "Iraqi",
+      "location": "Sulaymaniyah, Iraq",
+      "languages": ["Arabic", "English", "Kurdish"],
+      "tags": ["Legal Research", "Constitutional Law", "Academic"],
+      "expertise": ["Legal Research", "Constitutional Law", "Public Freedoms"],
+      "bio_en": "Assistant Professor specializing in legal research and constitutional law. Has particular interest in developing legal curricula in Iraq and studying comparative constitutional systems.",
       "contributions": [
-        "عضو في فريق تطوير المناهج القانونية بوزارة التعليم العالي",
-        "باحث مشارك في مركز الدراسات الدستورية",
-        "مستشار قانوني لعدد من المنظمات غير الحكومية"
+        "Member of the Legal Curriculum Development Team at Ministry of Higher Education",
+        "Research Associate at Center for Constitutional Studies",
+        "Legal Consultant for several NGOs"
       ],
       "publications": [
         {
-          "title": "الرقابة الدستورية في الأنظمة القانونية المقارنة",
+          "title": "Constitutional Review in Comparative Legal Systems",
           "year": 2019,
-          "venue": "مجلة العلوم القانونية"
+          "venue": "Journal of Legal Sciences"
         }
       ],
       "documents": []
     },
     {
       "id": "dawan_mohammed_jaza_abdullah",
-      "full_name": "دوان محمد جزة عبد الله",
-      "display_name": "أ.م.د. دوان محمد جزة",
-      "title_en": "أستاذ مساعد دكتور",
-      "title_ar": "أستاذ مساعد دكتور",
-      "nationality": "عراقي",
-      "location": "أربيل، العراق",
-      "languages": ["العربية", "الإنجليزية", "الكردية"],
-      "tags": ["القانون الدولي", "القانون الإنساني", "أكاديمي"],
-      "expertise": ["القانون الدولي", "القانون الدولي الإنساني", "الدراسات القانونية"],
-      "bio_en": "أستاذ مساعد متخصص في القانون الدولي والقانون الدولي الإنساني. يهتم بقضايا اللاجئين والنازحين والحماية الدولية في مناطق النزاع.",
-      "bio_ar": "أستاذ مساعد متخصص في القانون الدولي والقانون الدولي الإنساني. يهتم بقضايا اللاجئين والنازحين والحماية الدولية في مناطق النزاع.",
+      "full_name": "Dawan Mohammed Jaza Abdullah",
+      "title_en": "Assistant Professor Dr.",
+      "nationality": "Iraqi",
+      "location": "Erbil, Iraq",
+      "languages": ["Arabic", "English", "Kurdish"],
+      "tags": ["International Law", "Humanitarian Law", "Academic"],
+      "expertise": ["International Law", "International Humanitarian Law", "Legal Studies"],
+      "bio_en": "Assistant Professor specializing in International Law and International Humanitarian Law. Focuses on refugee and IDP issues, and international protection in conflict zones.",
       "contributions": [
-        "مستشار قانوني لمنظمة الهجرة الدولية (IOM)",
-        "محاضر في دورات القانون الإنساني للصليب الأحمر",
-        "عضو شبكة القانون الدولي الإنساني العراقية"
+        "Legal Consultant for International Organization for Migration (IOM)",
+        "Lecturer in IHL courses for Red Cross",
+        "Member of Iraqi International Humanitarian Law Network"
       ],
       "publications": [
         {
-          "title": "الحماية القانونية للنازحين داخلياً في العراق",
+          "title": "Legal Protection of Internally Displaced Persons in Iraq",
           "year": 2020,
-          "venue": "مجلة القانون الدولي"
+          "venue": "International Law Journal"
         }
       ],
       "documents": []
     },
     {
       "id": "sirwan_hamd_ahmed",
-      "full_name": "سروان حمد أحمد",
-      "display_name": "أ.م. سروان حمد أحمد",
-      "title_en": "أستاذ مساعد",
-      "title_ar": "أستاذ مساعد",
-      "nationality": "عراقي",
-      "location": "دهوك، العراق",
-      "languages": ["العربية", "الإنجليزية", "الكردية"],
-      "tags": ["الدراسات القانونية", "القانون الإداري", "أكاديمي"],
-      "expertise": ["الدراسات القانونية", "القانون الإداري", "القضاء الإداري"],
-      "bio_en": "أستاذ مساعد في الدراسات القانونية والقانون الإداري. يركز في أبحاثه على القانون الإداري المقارن وإصلاح القضاء الإداري في العراق.",
-      "bio_ar": "أستاذ مساعد في الدراسات القانونية والقانون الإداري. يركز في أبحاثه على القانون الإداري المقارن وإصلاح القضاء الإداري في العراق.",
+      "full_name": "Sirwan Hamd Ahmed",
+      "title_en": "Assistant Professor",
+      "nationality": "Iraqi",
+      "location": "Duhok, Iraq",
+      "languages": ["Arabic", "English", "Kurdish"],
+      "tags": ["Legal Studies", "Administrative Law", "Academic"],
+      "expertise": ["Legal Studies", "Administrative Law", "Administrative Judiciary"],
+      "bio_en": "Assistant Professor in Legal Studies and Administrative Law. Research focuses on comparative administrative law and reform of administrative judiciary in Iraq.",
       "contributions": [
-        "عضو لجنة تطوير النظام القضائي في إقليم كردستان",
-        "محاضر في المعهد القضائي",
-        "مستشار إداري لعدد من الدوائر الحكومية"
+        "Member of Judicial System Reform Committee in Kurdistan Region",
+        "Lecturer at Judicial Institute",
+        "Administrative Consultant for several government departments"
       ],
       "publications": [
         {
-          "title": "القضاء الإداري في العراق: الواقع والطموح",
+          "title": "Administrative Judiciary in Iraq: Reality and Aspiration",
           "year": 2021,
-          "venue": "مجلة الدراسات القانونية"
+          "venue": "Journal of Legal Studies"
         }
       ],
       "documents": []
     },
     {
       "id": "nagham_ishaq_zia",
-      "full_name": "نغم إسحق زيا خوشابا",
-      "display_name": "د. نغم إسحق زيا",
-      "title_en": "دكتور",
-      "title_ar": "دكتور",
-      "nationality": "عراقية",
-      "location": "دهوك، العراق",
-      "languages": ["العربية", "الإنجليزية", "الكردية", "الآرامية"],
-      "tags": ["القانون الدولي", "حقوق الإنسان", "دراسات السلام", "حقوق المرأة", "أكاديمية"],
-      "expertise": ["القانون الدولي العام", "القانون الدولي الإنساني", "حقوق الإنسان", "حقوق المرأة", "دراسات السلام"],
-      "bio_en": "أكاديمية قانونية تركز على القانون الدولي العام، القانون الدولي الإنساني، وحقوق الإنسان. لها اهتمامات بحثية في بناء السلام وحقوق المرأة وحماية الأقليات.",
-      "bio_ar": "أكاديمية قانونية تركز على القانون الدولي العام، القانون الدولي الإنساني، وحقوق الإنسان. لها اهتمامات بحثية في بناء السلام وحقوق المرأة وحماية الأقليات.",
+      "full_name": "Nagham Ishaq Zia Khoshaba",
+      "title_en": "Dr.",
+      "nationality": "Iraqi",
+      "location": "Duhok, Iraq",
+      "languages": ["Arabic", "English", "Kurdish", "Aramaic"],
+      "tags": ["International Law", "Human Rights", "Peace Studies", "Women's Rights", "Academic"],
+      "expertise": ["Public International Law", "International Humanitarian Law", "Human Rights", "Women's Rights", "Peace Studies"],
+      "bio_en": "Legal academic focusing on Public International Law, International Humanitarian Law, and Human Rights. Research interests include peace-building, women's rights, and minority protection.",
       "contributions": [
-        "عضو مؤسس لشبكة القانون الدولي الإنساني العراقية",
-        "خبيرة محلية في مشاريع التمويل الصغير لصندوق النقد الدولي",
-        "عضو لجنة حقوق الإنسان في وزارة حقوق الإنسان بإقليم كردستان",
-        "مؤسسة مشاركة لدار الخبرة العراقية (DKO Iraq)"
+        "Co-founder of Iraqi International Humanitarian Law Network",
+        "Local Expert in microfinance projects for International Monetary Fund",
+        "Member of Human Rights Committee at Ministry of Human Rights in Kurdistan Region",
+        "Co-founder of DKO Iraq Expertise House"
       ],
       "publications": [
         {
-          "title": "التمييز بين القانون الدولي الإنساني والقانون الدولي لحقوق الإنسان",
+          "title": "Distinction between International Humanitarian Law and International Human Rights Law",
           "year": 2005,
-          "venue": "مجلة الرافدين للحقوق"
+          "venue": "Al-Rafidain Law Journal"
         },
         {
-          "title": "حقوق الإنسان والقانون الدولي الإنساني",
+          "title": "Human Rights and International Humanitarian Law",
           "year": 2009,
-          "venue": "المجلة الجامعية - الإسكندرية"
+          "venue": "University Journal - Alexandria"
         },
         {
-          "title": "المرأة العراقية ورؤية السلام في العراق وفق مقاييس الأمم المتحدة",
+          "title": "Iraqi Women and Vision of Peace in Iraq according to UN Standards",
           "year": 2013,
-          "venue": "مجلة كلية القانون والسياسة - كركوك"
+          "venue": "Journal of Law and Politics College - Kirkuk"
         }
       ],
       "documents": [
         {
-          "title": "السيرة الذاتية - د. نغم إسحق زيا",
+          "title": "Curriculum Vitae - Dr. Nagham Ishaq Zia",
           "type": "pdf",
           "file": "assets/docs/nagham_cv.pdf"
         }
       ]
-    },
-    {
-      "id": "hamid_jassim_alwan",
-      "full_name": "حامد جاسم علوان",
-      "display_name": "أ.د. حامد جاسم علوان",
-      "title_en": "أستاذ دكتور",
-      "title_ar": "أستاذ دكتور",
-      "nationality": "عراقي",
-      "location": "البصرة، العراق",
-      "languages": ["العربية", "الإنجليزية"],
-      "tags": ["القانون التجاري", "التحكيم التجاري", "أكاديمي", "محامي"],
-      "expertise": ["القانون التجاري", "التحكيم التجاري الدولي", "قانون الشركات"],
-      "bio_en": "أستاذ القانون التجاري والتحكيم الدولي بجامعة البصرة. خبير في التحكيم التجاري الدولي وقانون الاستثمار.",
-      "bio_ar": "أستاذ القانون التجاري والتحكيم الدولي بجامعة البصرة. خبير في التحكيم التجاري الدولي وقانون الاستثمار.",
-      "contributions": [
-        "محكم دولي معتمد في مركز التحكيم الدولي",
-        "مستشار قانوني للعديد من الشركات النفطية الدولية",
-        "عضو مجلس إدارة غرفة تجارة البصرة"
-      ],
-      "publications": [
-        {
-          "title": "التحكيم التجاري الدولي في العقود النفطية",
-          "year": 2016,
-          "venue": "دار الثقافة والنشر"
-        }
-      ],
-      "documents": []
-    },
-    {
-      "id": "sanaa_abdulrahman",
-      "full_name": "سناء عبد الرحمن",
-      "display_name": "د. سناء عبد الرحمن",
-      "title_en": "دكتور",
-      "title_ar": "دكتور",
-      "nationality": "عراقية",
-      "location": "بغداد، العراق",
-      "languages": ["العربية", "الإنجليزية", "الفرنسية"],
-      "tags": ["القانون الجنائي", "علم الإجرام", "أكاديمية"],
-      "expertise": ["القانون الجنائي", "علم الإجرام", "العدالة الجنائية"],
-      "bio_en": "أستاذة القانون الجنائي وعلم الإجرام. متخصصة في إصلاح نظام العدالة الجنائية ومكافحة الجريمة المنظمة.",
-      "bio_ar": "أستاذة القانون الجنائي وعلم الإجرام. متخصصة في إصلاح نظام العدالة الجنائية ومكافحة الجريمة المنظمة.",
-      "contributions": [
-        "مستشارة لوزارة العدل في إصلاح النظام الجنائي",
-        "باحثة في مركز مكافحة الجريمة المنظمة",
-        "محاضرة في أكاديمية الشرطة"
-      ],
-      "publications": [
-        {
-          "title": "إصلاح النظام الجنائي في مرحلة ما بعد الصراع",
-          "year": 2018,
-          "venue": "مجلة العدالة والقانون"
-        }
-      ],
-      "documents": []
     }
   ]
 }
