@@ -1,125 +1,30 @@
 {
   "experts": [
     {
-      "id": "abdullah_ali_abbou",
-      "full_name": "Abdullah Ali Abbou",
-      "display_name": "Abdullah Ali Abbou",
-      "title_en": "Prof. Dr.",
-      "nationality": "Iraqi",
-      "location": "Iraq",
-      "languages": ["Arabic"],
-      "tags": ["legal-studies", "academia"],
-      "expertise": ["Legal Studies"],
-      "bio_en": "Academic profile placeholder — add verified details and publications.",
-      "publications": [],
-      "documents": []
-    },
-    {
-      "id": "khudhair_yaseen_al_ghannami",
-      "full_name": "Khudhair Yaseen Khudhair Kadhem Al-Ghannami",
-      "display_name": "Khudhair Yaseen Khudhair Kadhem Al-Ghannami",
-      "title_en": "Prof. Dr.",
+      "full_name": "Prof. Dr. Khudhair Yaseen Khudhair Kadhem Al-Ghannami",
       "nationality": "Iraqi",
       "location": "Karbala, Iraq",
       "languages": ["Arabic"],
-      "tags": ["international-law", "human-rights", "counter-terrorism", "academia"],
+      "tags": ["international-law", "counter-terrorism"],
       "expertise": [
         "Public International Law",
         "International Dispute Settlement",
         "Counter-Terrorism (International Law)"
       ],
-      "bio_en": "Assistant Professor at the University of Karbala since 2006; holds PhD in Public International Law (2018). Research focuses on counter-terrorism in international law and dispute settlement.",
-      "publications": [
-        {
-          "title": "Combating Terrorism in International Law and its Effectiveness in Iraq (PhD thesis)",
-          "year": 2018,
-          "venue": "Islamic University of Lebanon"
-        },
-        {
-          "title": "Peaceful Means of Dispute Settlement in International Relations (MA thesis)",
-          "year": 2005,
-          "venue": "Al-Mustansiriya University"
-        }
-      ],
-      "documents": [
-        {
-          "title": "CV (PDF)",
-          "type": "pdf",
-          "file": "assets/docs/khudhair_cv.pdf"
-        }
-      ],
-      "contact": {
-        "email": "kadeery@yahoo.com",
-        "phones": ["07704331982", "07816115291"]
-      },
-      "privacy_note": "Avoid publishing personal contact details unless officially public & permitted."
+      "bio_en": "Professor of Public International Law at the University of Karbala. His research focuses on counter-terrorism in international law and peaceful settlement of disputes."
     },
     {
-      "id": "bakhtyar_sdiq_rahim",
-      "full_name": "Bakhtyar Sdiq Rahim",
-      "display_name": "Bakhtyar Sdiq Rahim",
-      "title_en": "Asst. Prof.",
-      "nationality": "Iraqi",
-      "location": "Iraq",
-      "languages": ["Arabic", "English"],
-      "tags": ["legal-research", "academia"],
-      "expertise": ["Legal Research", "Public Law"],
-      "bio_en": "Academic profile placeholder — add verified details and publications.",
-      "publications": [],
-      "documents": []
-    },
-    {
-      "id": "dawan_mohammed_jaza_abdullah",
-      "full_name": "Dawan Mohammed Jaza Abdullah",
-      "display_name": "Dawan Mohammed Jaza Abdullah",
-      "title_en": "Asst. Prof. Dr.",
-      "nationality": "Iraqi",
-      "location": "Iraq",
-      "languages": ["Arabic", "English"],
-      "tags": ["international-law", "academia"],
-      "expertise": ["International Law", "Legal Studies"],
-      "bio_en": "Academic profile placeholder — add verified details and publications.",
-      "publications": [],
-      "documents": []
-    },
-    {
-      "id": "sirwan_hamd_ahmed",
-      "full_name": "Sirwan Hamd Ahmed",
-      "display_name": "Sirwan Hamd Ahmed",
-      "title_en": "Asst. Prof.",
-      "nationality": "Iraqi",
-      "location": "Iraq",
-      "languages": ["Arabic", "English"],
-      "tags": ["legal-studies", "academia"],
-      "expertise": ["Legal Studies"],
-      "bio_en": "Academic profile placeholder — add verified details and publications.",
-      "publications": [],
-      "documents": []
-    },
-    {
-      "id": "nagham_ishaq_zia",
-      "full_name": "Nagham Ishaq Zia",
-      "display_name": "Nagham Ishaq Zia",
-      "title_en": "Dr.",
+      "full_name": "Dr. Nagham Ishaq Zia",
       "nationality": "Iraqi",
       "location": "Duhok, Iraq",
       "languages": ["Arabic", "English"],
-      "tags": ["international-law", "human-rights", "peace-studies", "academia"],
+      "tags": ["human-rights", "ihl"],
       "expertise": [
-        "Public International Law",
-        "International Humanitarian Law (IHL)",
-        "International Human Rights Law",
+        "International Humanitarian Law",
+        "Human Rights Law",
         "Women’s Rights & Peace Studies"
       ],
-      "bio_en": "Legal academic focusing on public international law, international humanitarian law, and human rights, with research interests in peace-building and women's rights.",
-      "publications": [],
-      "documents": [
-        {
-          "title": "CV (PDF)",
-          "type": "pdf",
-          "file": "assets/docs/nagham_cv.pdf"
-        }
-      ]
+      "bio_en": "Legal academic focusing on international humanitarian law and human rights, with particular interest in peace-building and women’s rights."
     }
   ]
 }
