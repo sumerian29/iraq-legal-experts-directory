@@ -1,164 +1,146 @@
-# ===============================
-# Iraq Legal Experts Directory
-# Final Clean Version (Streamlit Cloud Safe)
-# ===============================
-
+import streamlit as st
 import json
 import os
-import streamlit as st
 
-# -------------------------------
-# Page config
-# -------------------------------
+# ---------------- CONFIG ----------------
 st.set_page_config(
     page_title="Iraq Legal Experts — Academic & Research Directory",
-    page_icon="⚖️",
-    layout="wide",
+    layout="wide"
 )
 
+# ---------------- PATHS ----------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
 DATA_PATH = os.path.join(BASE_DIR, "experts.json")
-MUSIC_PATH = os.path.join(BASE_DIR, "assets", "audio", "ambient.mp3")
-BG_IMAGE_PATH = os.path.join(BASE_DIR, "hammurabi_bg.jpg")
+BG_IMAGE = os.path.join(BASE_DIR, "assets", "images", "hammurabi_bg.jpg")
+AUDIO_PATH = os.path.join(BASE_DIR, "assets", "audio", "ambient.mp3")
 
-# -------------------------------
-# Utilities
-# -------------------------------
-def load_data():
-    if not os.path.exists(DATA_PATH):
-        return []
-    with open(DATA_PATH, "r", encoding="utf-8") as f:
-        return json.load(f).get("experts", [])
+# ---------------- LOAD DATA ----------------
+with open(DATA_PATH, "r", encoding="utf-8") as f:
+    experts = json.load(f)
 
-def safe_list(x):
-    if isinstance(x, list):
-        return x
-    if isinstance(x, str):
-        return [x]
-    return []
+# ---------------- STYLE ----------------
+st.markdown(
+    f"""
+    <style>
+    body {{
+        background: #eaf4ff;
+    }}
+    .app-bg {{
+        position: fixed;
+        inset: 0;
+        background-image: url("{BG_IMAGE}");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.08;
+        z-index: -2;
+    }}
+    .cuneiform {{
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 110px;
+        font-weight: 800;
+        color: rgba(0,0,0,0.18);
+        transform: rotate(-45deg);
+        z-index: -1;
+        pointer-events: none;
+    }}
+    </style>
 
-# -------------------------------
-# Background + Watermark
-# -------------------------------
-st.markdown("""
-<style>
-body {
-    background: linear-gradient(135deg, #eef5ff, #fffaf0);
-}
-.cuneiform-watermark {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    font-size: 110px;
-    color: rgba(0,0,0,0.05);
-    z-index: 0;
-    white-space: nowrap;
-    pointer-events: none;
-    user-select: none;
-    font-family: "Segoe UI Symbol","Noto Sans Cuneiform",serif;
-}
-.block {
-    background: rgba(255,255,255,0.75);
-    border-radius: 18px;
-    padding: 18px;
-    box-shadow: 0 20px 45px rgba(0,0,0,0.08);
-    backdrop-filter: blur(10px);
-}
-footer, header {visibility: hidden;}
-</style>
-
-<div class="cuneiform-watermark">
-𒆳𒂗𒆠 𒁹𒅗𒁺𒌑 𒅗𒋗𒁺
-</div>
-""", unsafe_allow_html=True)
-
-# -------------------------------
-# Header
-# -------------------------------
-st.markdown("""
-<div class="block">
-<h1>Iraq Legal Experts — Academic & Research Directory</h1>
-<p>
-A modern academic hub inspired by Iraq’s Mesopotamian legal heritage
-(Hammurabi · Akkadian era · Cuneiform legacy).
-</p>
-</div>
-""", unsafe_allow_html=True)
-
-# -------------------------------
-# Music (manual play – Cloud safe)
-# -------------------------------
-with st.expander("🎵 Ambient Music (optional)"):
-    if os.path.exists(MUSIC_PATH):
-        st.audio(MUSIC_PATH)
-    else:
-        st.info("Music file not found. Place it at: assets/audio/ambient.mp3")
-
-# -------------------------------
-# Load experts
-# -------------------------------
-experts = load_data()
-
-# -------------------------------
-# Filters
-# -------------------------------
-st.markdown("### Filters")
-
-search = st.text_input("Search (name, bio, expertise)").lower()
-
-all_tags = sorted(
-    {t for e in experts for t in safe_list(e.get("tags"))}
+    <div class="app-bg"></div>
+    <div class="cuneiform">
+        𒆳𒆳𒀭𒀀𒁲𒀭𒋫𒀀𒀭
+    </div>
+    """,
+    unsafe_allow_html=True
 )
 
-tag = st.selectbox("Tag", ["All"] + all_tags)
+# ---------------- HEADER ----------------
+st.title("Iraq Legal Experts — Academic & Research Directory")
+st.caption(
+    "A modern academic hub inspired by Iraq’s Mesopotamian legal heritage "
+    "(Hammurabi · Akkadian era · Cuneiform legacy)."
+)
 
-# -------------------------------
-# Filtering logic (FIXED)
-# -------------------------------
-filtered = experts
+# ---------------- MUSIC ----------------
+with st.expander("🎵 Ambient Music (optional)"):
+    if os.path.exists(AUDIO_PATH):
+        st.audio(AUDIO_PATH)
+    else:
+        st.warning("Music file not found. Place it in assets/audio/ambient.mp3")
 
-if search:
-    filtered = [
-        e for e in filtered
-        if search in e.get("full_name","").lower()
-        or search in e.get("bio_en","").lower()
-    ]
+# ---------------- FILTERS ----------------
+st.subheader("Filters")
 
-if tag != "All":
-    filtered = [
-        e for e in filtered
-        if tag in safe_list(e.get("tags"))
-    ]
+search = st.text_input("Search (name, bio, expertise)")
+tags = sorted({tag for e in experts for tag in e.get("tags", [])})
+selected_tag = st.selectbox("Tag", ["All"] + tags)
 
-# -------------------------------
-# Layout
-# -------------------------------
-col1, col2 = st.columns([1, 2])
+# ---------------- FILTER LOGIC ----------------
+def match(expert):
+    if search:
+        text = (expert["name"] + expert.get("overview", "")).lower()
+        if search.lower() not in text:
+            return False
+    if selected_tag != "All":
+        if selected_tag not in expert.get("tags", []):
+            return False
+    return True
+
+filtered = [e for e in experts if match(e)]
+
+# ---------------- LAYOUT ----------------
+col1, col2 = st.columns([1, 3])
 
 with col1:
-    st.markdown("### Experts")
-    if not filtered:
-        st.warning("No experts match the selected filters.")
-    names = [e["full_name"] for e in filtered]
-    selected = st.radio("Select an expert", names)
+    st.subheader("Experts")
+    for i, e in enumerate(filtered):
+        if st.radio(
+            "Select an expert",
+            options=[x["name"] for x in filtered],
+            index=0,
+            key="expert_radio"
+        ):
+            selected = next(x for x in filtered if x["name"] == e["name"])
+            break
+    else:
+        selected = None
 
 with col2:
-    expert = next(e for e in filtered if e["full_name"] == selected)
-    st.markdown(f"## {expert['full_name']}")
-    st.write("**Nationality:**", expert.get("nationality","Iraqi"))
-    st.write("**Location:**", expert.get("location","Iraq"))
-    st.write("**Languages:**", ", ".join(safe_list(expert.get("languages"))))
-    st.write("**Expertise:**", ", ".join(safe_list(expert.get("expertise"))))
-    st.markdown("### Overview")
-    st.write(expert.get("bio_en",""))
+    if selected:
+        st.header(selected["name"])
+        st.write(f"**Nationality:** {selected['nationality']}")
+        st.write(f"**Location:** {selected['location']}")
+        st.write(f"**Languages:** {', '.join(selected['languages'])}")
+        st.write(f"**Expertise:** {selected['expertise']}")
 
-# -------------------------------
-# Footer
-# -------------------------------
-st.markdown("""
-<div style="text-align:center; margin-top:40px; opacity:0.7;">
-Design & Development: Consultant / Senior Chief Engineer Tareq Majeed Al-Karimi
-</div>
-""", unsafe_allow_html=True)
+        tab1, tab2, tab3 = st.tabs(
+            ["Overview", "Publications", "Documents"]
+        )
+
+        with tab1:
+            st.write(selected.get("overview", "—"))
+
+        with tab2:
+            for p in selected.get("publications", []):
+                st.markdown(f"- {p}")
+
+        with tab3:
+            if "cv" in selected:
+                st.download_button(
+                    "Download CV (PDF)",
+                    open(os.path.join(BASE_DIR, selected["cv"]), "rb"),
+                    file_name=os.path.basename(selected["cv"])
+                )
+
+    else:
+        st.info("Select an expert to view details.")
+
+# ---------------- FOOTER ----------------
+st.markdown("---")
+st.caption(
+    "Design & Development: Consultant / Senior Chief Engineer "
+    "Tareq Majeed Al-Karimi"
+)
