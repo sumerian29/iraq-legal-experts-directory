@@ -16,8 +16,7 @@ st.set_page_config(
 )
 
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_PATH = os.path.join(APP_DIR, "data", "experts.json")
-
+DATA_PATH = os.path.join(APP_DIR, "experts.json")
 # Assets configuration
 MUSIC_CANDIDATES = [
     os.path.join(APP_DIR, "assets", "audio", "ambient.mp3"),
@@ -618,3 +617,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
