@@ -1,27 +1,82 @@
-[
-  {
-    "name": "Prof. Dr. Khudhair Yaseen Khudhair Kadhem Al-Ghannami",
-    "nationality": "Iraqi",
-    "location": "Karbala, Iraq",
-    "languages": ["Arabic"],
-    "expertise": "Public International Law, International Dispute Settlement, Counter-Terrorism",
-    "overview": "Professor of Public International Law at the University of Karbala.",
-    "publications": [
-      "International Legal Responses to Terrorism",
-      "Peaceful Settlement of Disputes in International Law"
-    ],
-    "cv": "khudhair_yaseen_alghannami_cv.pdf",
-    "tags": ["International Law", "Counter-Terrorism"]
-  },
-  {
-    "name": "Dr. Nagham Ishaq Zia",
-    "nationality": "Iraqi",
-    "location": "Duhok, Iraq",
-    "languages": ["Arabic", "English"],
-    "expertise": "International Humanitarian Law, Human Rights",
-    "overview": "Legal academic focusing on humanitarian law and women's rights.",
-    "publications": [],
-    "cv": "nagham_cv.pdf",
-    "tags": ["Human Rights", "IHL"]
-  }
-]
+{
+  "experts": [
+    {
+      "id": "abdullah_ali_abbou",
+      "full_name": "Prof. Dr. Abdullah Ali Abbou",
+      "nationality": "Iraqi",
+      "location": "Iraq",
+      "languages": ["Arabic"],
+      "expertise": ["Legal Studies"],
+      "bio": "Academic profile available. Detailed biography will be added.",
+      "documents": []
+    },
+    {
+      "id": "khudhair_yaseen_al_ghannami",
+      "full_name": "Prof. Dr. Khudhair Yaseen Khudhair Kadhem Al-Ghannami",
+      "nationality": "Iraqi",
+      "location": "Karbala, Iraq",
+      "languages": ["Arabic"],
+      "expertise": [
+        "Public International Law",
+        "International Dispute Settlement",
+        "Counter-Terrorism (International Law)"
+      ],
+      "bio": "Professor of Public International Law at the University of Karbala.",
+      "documents": [
+        {
+          "title": "Curriculum Vitae",
+          "file": "assets/docs/khudhair_yaseen_alghannami_cv.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bakhtyar_sdiq_rahim",
+      "full_name": "Asst. Prof. Bakhtyar Sdiq Rahim",
+      "nationality": "Iraqi",
+      "location": "Iraq",
+      "languages": ["Arabic", "English"],
+      "expertise": ["Public Law"],
+      "bio": "Academic profile available.",
+      "documents": []
+    },
+    {
+      "id": "dawan_mohammed_jaza",
+      "full_name": "Asst. Prof. Dr. Dawan Mohammed Jaza Abdullah",
+      "nationality": "Iraqi",
+      "location": "Iraq",
+      "languages": ["Arabic", "English"],
+      "expertise": ["International Law"],
+      "bio": "Academic profile available.",
+      "documents": []
+    },
+    {
+      "id": "sirwan_hamd_ahmed",
+      "full_name": "Asst. Prof. Sirwan Hamd Ahmed",
+      "nationality": "Iraqi",
+      "location": "Iraq",
+      "languages": ["Arabic"],
+      "expertise": ["Legal Studies"],
+      "bio": "Academic profile available.",
+      "documents": []
+    },
+    {
+      "id": "nagham_ishaq_zia",
+      "full_name": "Dr. Nagham Ishaq Zia",
+      "nationality": "Iraqi",
+      "location": "Duhok, Iraq",
+      "languages": ["Arabic", "English"],
+      "expertise": [
+        "Public International Law",
+        "International Humanitarian Law",
+        "Human Rights"
+      ],
+      "bio": "Researcher in international law and women's rights.",
+      "documents": [
+        {
+          "title": "Curriculum Vitae",
+          "file": "assets/docs/nagham_cv.pdf"
+        }
+      ]
+    }
+  ]
+}
