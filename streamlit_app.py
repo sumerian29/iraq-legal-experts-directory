@@ -2,145 +2,180 @@ import streamlit as st
 import json
 import os
 
-# ---------------- CONFIG ----------------
+# --------------------------------------------------
+# Basic config
+# --------------------------------------------------
 st.set_page_config(
     page_title="Iraq Legal Experts — Academic & Research Directory",
-    layout="wide"
+    layout="wide",
 )
 
-# ---------------- PATHS ----------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_PATH = os.path.join(BASE_DIR, "experts.json")
-BG_IMAGE = os.path.join(BASE_DIR, "assets", "images", "hammurabi_bg.jpg")
-AUDIO_PATH = os.path.join(BASE_DIR, "assets", "audio", "ambient.mp3")
+DATA_FILE = os.path.join(BASE_DIR, "experts.json")
+AUDIO_FILE = os.path.join(BASE_DIR, "assets", "audio", "ambient.mp3")
 
-# ---------------- LOAD DATA ----------------
-with open(DATA_PATH, "r", encoding="utf-8") as f:
+# --------------------------------------------------
+# Load data
+# --------------------------------------------------
+with open(DATA_FILE, "r", encoding="utf-8") as f:
     experts = json.load(f)
 
-# ---------------- STYLE ----------------
+# --------------------------------------------------
+# Global CSS (background + cuneiform watermark)
+# --------------------------------------------------
 st.markdown(
-    f"""
+    """
     <style>
-    body {{
-        background: #eaf4ff;
-    }}
-    .app-bg {{
+    body {
+        background: linear-gradient(
+            135deg,
+            #eaf4ff 0%,
+            #f7fbff 50%,
+            #ffffff 100%
+        );
+    }
+
+    .cuneiform-bg {
         position: fixed;
-        inset: 0;
-        background-image: url("{BG_IMAGE}");
-        background-size: cover;
-        background-position: center;
-        opacity: 0.08;
-        z-index: -2;
-    }}
-    .cuneiform {{
-        position: fixed;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 110px;
-        font-weight: 800;
-        color: rgba(0,0,0,0.18);
+        top: 20%;
+        left: -10%;
+        font-size: 180px;
+        color: rgba(0,0,0,0.12);
         transform: rotate(-45deg);
-        z-index: -1;
+        z-index: 0;
         pointer-events: none;
-    }}
+        font-family: "Segoe UI Symbol", "Noto Sans Cuneiform", serif;
+        white-space: nowrap;
+    }
+
+    .content-wrapper {
+        position: relative;
+        z-index: 1;
+    }
     </style>
 
-    <div class="app-bg"></div>
-    <div class="cuneiform">
-        𒆳𒆳𒀭𒀀𒁲𒀭𒋫𒀀𒀭
+    <div class="cuneiform-bg">
+        𒆠𒂗𒆤 𒀀𒈾 𒄿𒈾 𒁀𒀭 𒀸
     </div>
     """,
     unsafe_allow_html=True
 )
 
-# ---------------- HEADER ----------------
+# --------------------------------------------------
+# Header
+# --------------------------------------------------
+st.markdown('<div class="content-wrapper">', unsafe_allow_html=True)
+
 st.title("Iraq Legal Experts — Academic & Research Directory")
-st.caption(
+st.markdown(
     "A modern academic hub inspired by Iraq’s Mesopotamian legal heritage "
     "(Hammurabi · Akkadian era · Cuneiform legacy)."
 )
 
-# ---------------- MUSIC ----------------
-with st.expander("🎵 Ambient Music (optional)"):
-    if os.path.exists(AUDIO_PATH):
-        st.audio(AUDIO_PATH)
+# --------------------------------------------------
+# Ambient music (safe)
+# --------------------------------------------------
+with st.expander("🎵 Ambient Music (optional)", expanded=False):
+    if os.path.exists(AUDIO_FILE):
+        st.audio(AUDIO_FILE, loop=True)
     else:
-        st.warning("Music file not found. Place it in assets/audio/ambient.mp3")
+        st.warning("Music file not found. Place it in: assets/audio/ambient.mp3")
 
-# ---------------- FILTERS ----------------
+# --------------------------------------------------
+# Filters (no auto-filtering)
+# --------------------------------------------------
 st.subheader("Filters")
 
-search = st.text_input("Search (name, bio, expertise)")
-tags = sorted({tag for e in experts for tag in e.get("tags", [])})
-selected_tag = st.selectbox("Tag", ["All"] + tags)
+search_text = st.text_input("Search (name, bio, expertise)", "")
+selected_tag = st.selectbox("Tag", ["All"])
+# (Tag system reserved for future expansion)
 
-# ---------------- FILTER LOGIC ----------------
-def match(expert):
-    if search:
-        text = (expert["name"] + expert.get("overview", "")).lower()
-        if search.lower() not in text:
-            return False
-    if selected_tag != "All":
-        if selected_tag not in expert.get("tags", []):
+# --------------------------------------------------
+# Filter logic (safe)
+# --------------------------------------------------
+def match_expert(expert):
+    if search_text.strip():
+        blob = (
+            expert.get("name", "") +
+            expert.get("overview", "") +
+            " ".join(expert.get("expertise", []))
+        ).lower()
+        if search_text.lower() not in blob:
             return False
     return True
 
-filtered = [e for e in experts if match(e)]
+filtered_experts = [e for e in experts if match_expert(e)]
 
-# ---------------- LAYOUT ----------------
-col1, col2 = st.columns([1, 3])
+# --------------------------------------------------
+# Layout
+# --------------------------------------------------
+col_left, col_right = st.columns([1, 2])
 
-with col1:
+# --------------------------------------------------
+# Experts list
+# --------------------------------------------------
+with col_left:
     st.subheader("Experts")
-    for i, e in enumerate(filtered):
-        if st.radio(
-            "Select an expert",
-            options=[x["name"] for x in filtered],
-            index=0,
-            key="expert_radio"
-        ):
-            selected = next(x for x in filtered if x["name"] == e["name"])
-            break
+    if not filtered_experts:
+        st.info("No experts match the current filters.")
     else:
-        selected = None
+        names = [e["name"] for e in filtered_experts]
+        selected_name = st.radio(
+            "Select an expert",
+            names,
+            index=0
+        )
+        selected = next(e for e in filtered_experts if e["name"] == selected_name)
 
-with col2:
-    if selected:
-        st.header(selected["name"])
-        st.write(f"**Nationality:** {selected['nationality']}")
-        st.write(f"**Location:** {selected['location']}")
-        st.write(f"**Languages:** {', '.join(selected['languages'])}")
-        st.write(f"**Expertise:** {selected['expertise']}")
+# --------------------------------------------------
+# Profile view
+# --------------------------------------------------
+with col_right:
+    if filtered_experts:
+        st.subheader(selected["name"])
 
-        tab1, tab2, tab3 = st.tabs(
-            ["Overview", "Publications", "Documents"]
+        st.markdown(f"**Nationality:** {selected.get('nationality', '—')}")
+        st.markdown(f"**Location:** {selected.get('location', '—')}")
+        st.markdown(f"**Languages:** {', '.join(selected.get('languages', [])) or '—'}")
+        st.markdown(
+            f"**Expertise:** {', '.join(selected.get('expertise', [])) or '—'}"
         )
 
-        with tab1:
-            st.write(selected.get("overview", "—"))
+        tabs = st.tabs(["Overview", "Publications", "Documents"])
 
-        with tab2:
-            for p in selected.get("publications", []):
-                st.markdown(f"- {p}")
+        # Overview
+        with tabs[0]:
+            st.write(selected.get("overview", "No overview available."))
 
-        with tab3:
-            if "cv" in selected:
-                st.download_button(
-                    "Download CV (PDF)",
-                    open(os.path.join(BASE_DIR, selected["cv"]), "rb"),
-                    file_name=os.path.basename(selected["cv"])
-                )
+        # Publications (placeholder)
+        with tabs[1]:
+            st.info("Publications will be added in future updates.")
 
-    else:
-        st.info("Select an expert to view details.")
+        # Documents (CV)
+        with tabs[2]:
+            cv = selected.get("cv")
+            if cv:
+                cv_path = os.path.join(BASE_DIR, cv)
+                if os.path.exists(cv_path):
+                    with open(cv_path, "rb") as f:
+                        st.download_button(
+                            "Download CV (PDF)",
+                            f,
+                            file_name=os.path.basename(cv_path),
+                            mime="application/pdf"
+                        )
+                else:
+                    st.warning("CV file referenced but not found in repository.")
+            else:
+                st.info("No documents available for this expert.")
 
-# ---------------- FOOTER ----------------
+# --------------------------------------------------
+# Footer
+# --------------------------------------------------
 st.markdown("---")
 st.caption(
     "Design & Development: Consultant / Senior Chief Engineer "
     "Tareq Majeed Al-Karimi"
 )
+
+st.markdown("</div>", unsafe_allow_html=True)
