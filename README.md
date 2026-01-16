@@ -1,2 +1,8 @@
-# iraq-legal-experts-directory
-An academic and research-oriented directory of Iraqi legal scholars and experts, inspired by Mesopotamian legal heritage (Hammurabi, Akkadian era, cuneiform tradition), built with Streamlit.
+# DKO Iraq - Experts Directory (Streamlit)
+
+A lightweight Streamlit prototype to list Iraqi experts with expertise, publications, and optional PDF documents.
+
+## Run locally
+```bash
+pip install -r requirements.txt
+streamlit run streamlit_app.py
